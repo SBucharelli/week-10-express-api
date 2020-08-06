@@ -1,0 +1,25 @@
+### Test the home page endpoint
+
+GET http://localhost:3001
+
+### Test a 404
+GET http://localhost:3001/testing-404
+
+### Test creating a product
+POST http://localhost:3001/
+// need to add in Content-Type to tell the body-parser that it's json.
+Content-Type: application/json
+
+{
+    "title": "Golf shirts"
+}
+
+### Test the PUT which should update a product
+
+PUT http://localhost:3001/5f2b56f5a7cbec0cf269529f
+// need to add in Content-Type to tell the body-parser that it's json for PUT as well.
+Content-Type: application/json
+
+{
+    "title": "Comfy shirt"
+}
